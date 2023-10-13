@@ -1,0 +1,65 @@
+def waiter_application_v2():
+    # Hardcoded orders: (table number, dish number, dish price)
+    hardcoded_orders = [
+        (1, 12, 10),
+        (1, 15, 5),
+        (2, 20, 15),
+        (3, 1, 7),
+        (3, 22, 12),
+        (4, 25, 11),
+        (5, 4, 6),
+        (5, 10, 9),
+        (6, 17, 10),
+        (6, 8, 7),
+        (6, 14, 8),
+        (7, 2, 6),
+        (7, 30, 12),
+        (8, 33, 15),
+        (9, 29, 14),
+        (9, 31, 10),
+        (10, 18, 6),
+        (11, 3, 7),
+        (11, 19, 13),
+        (12, 21, 10),
+        (12, 5, 5),
+        (13, 23, 15),
+        (13, 40, 9),
+        (14, 41, 8),
+        (15, 15, 7),
+        (15, 2, 6),
+        (15, 9, 10)
+    ]
+    
+    tables_served = set()
+    dishes_served = 0
+    total_turnover = 0.0
+
+    for order in hardcoded_orders:
+        table_number, dish_number, dish_price = order
+        tables_served.add(table_number)
+        dishes_served += 1
+        total_turnover += dish_price
+
+    # Print summary
+    print("\nSummary:")
+    print(f"Tables served: {len(tables_served)}")
+    print(f"Dishes served: {dishes_served}")
+    print(f"Total turnover: ${total_turnover:.2f}")
+
+    # Return summary information as a dictionary
+    summary_info = {
+        "tables_served": len(tables_served),
+        "dishes_served": dishes_served,
+        "total_turnover": total_turnover
+    }
+
+    return summary_info
+
+# Call the function
+summary = waiter_application_v2()
+
+# Print the summary information:
+print("\nOutput:")
+print(f"Tables served: {summary['tables_served']}")
+print(f"Dishes served: {summary['dishes_served']}")
+print(f"Total turnover: ${summary['total_turnover']:.2f}")
