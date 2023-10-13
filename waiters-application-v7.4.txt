@@ -13,11 +13,7 @@ def waiter_application_v4():
         (6, 'Dessert', 'Dessert-3', 7),
         (7, 'Main Dish', 'Dish-8', 13),
         (7, 'Beverage', 'Beverage-4', 2),
-        (8, 'Appetizer', 'Appetizer-1', 6),
-        (9, 'Main Dish', 'Dish-21', 16),
-        (9, 'Beverage', 'Beverage-1', 3),
-        (10, 'Dessert', 'Dessert-4', 9),
-        (11, 'Main Dish', 'Dish-28', 15),
+        (8, 'Appetizer', 'Appetizer-1', 6)
         (11, 'Beverage', 'Beverage-3', 5),
         (12, 'Main Dish', 'Dish-4', 14),
         (13, 'Appetizer', 'Appetizer-4', 5),
