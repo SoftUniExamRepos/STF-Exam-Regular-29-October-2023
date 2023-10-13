@@ -24,8 +24,7 @@ def waiter_application_v3():
         (13, 'Beverage-2', 4),
         (14, 'Dish-9', 9),
         (15, 'Dish-11', 12),
-        (16, 'Dish-2', 10),
-        (16, 'Beverage-4', 2),
+        (16, 'Dish-2', 10)
         (17, 'Dish-22', 13),
         (18, 'Dish-6', 7),
         (19, 'Dish-26', 9),
