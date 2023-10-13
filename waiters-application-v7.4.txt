@@ -1,0 +1,69 @@
+def waiter_application_v4():
+    # Hardcoded orders: (table number, category, item name, item price)
+    hardcoded_orders = [
+        (1, 'Appetizer', 'Appetizer-5', 5),
+        (1, 'Beverage', 'Beverage-1', 3),
+        (2, 'Main Dish', 'Dish-12', 15),
+        (3, 'Dessert', 'Dessert-2', 7),
+        (3, 'Beverage', 'Beverage-2', 4),
+        (4, 'Main Dish', 'Dish-20', 18),
+        (5, 'Appetizer', 'Appetizer-3', 6),
+        (5, 'Beverage', 'Beverage-3', 5),
+        (6, 'Main Dish', 'Dish-15', 14),
+        (6, 'Dessert', 'Dessert-3', 7),
+        (7, 'Main Dish', 'Dish-8', 13),
+        (7, 'Beverage', 'Beverage-4', 2),
+        (8, 'Appetizer', 'Appetizer-1', 6),
+        (9, 'Main Dish', 'Dish-21', 16),
+        (9, 'Beverage', 'Beverage-1', 3),
+        (10, 'Dessert', 'Dessert-4', 9),
+        (11, 'Main Dish', 'Dish-28', 15),
+        (11, 'Beverage', 'Beverage-3', 5),
+        (12, 'Main Dish', 'Dish-4', 14),
+        (13, 'Appetizer', 'Appetizer-4', 5),
+        (13, 'Beverage', 'Beverage-2', 4),
+        (14, 'Main Dish', 'Dish-9', 15),
+        (15, 'Dessert', 'Dessert-1', 8),
+        (16, 'Main Dish', 'Dish-2', 17),
+        (16, 'Beverage', 'Beverage-4', 2),
+        (17, 'Appetizer', 'Appetizer-2', 5),
+        (18, 'Main Dish', 'Dish-6', 13),
+        (19, 'Dessert', 'Dessert-5', 8),
+        (19, 'Beverage', 'Beverage-1', 3),
+        (20, 'Main Dish', 'Dish-19', 16),
+        (20, 'Beverage', 'Beverage-3', 5)
+    ]
+    
+    tables_served = set()
+    items_served = 0
+    total_turnover = 0.0
+
+    for order in hardcoded_orders:
+        table_number, category, item_name, item_price = order
+        tables_served.add(table_number)
+        items_served += 1
+        total_turnover += item_price
+
+    # Print summary
+    print("\nSummary:")
+    print(f"Tables served: {len(tables_served)}")
+    print(f"Items served: {items_served}")
+    print(f"Total turnover: ${total_turnover:.2f}")
+
+    # Return summary information as a dictionary
+    summary_info = {
+        "tables_served": len(tables_served),
+        "items_served": items_served,
+        "total_turnover": total_turnover
+    }
+
+    return summary_info
+
+# Call the function
+summary = waiter_application_v4()
+
+# Print the summary information:
+print("\nOutput:")
+print(f"Tables served: {summary['tables_served']}")
+print(f"Items served: {summary['items_served']}")
+print(f"Total turnover: ${summary['total_turnover']:.2f}")
