@@ -50,7 +50,6 @@ function waiterApplicationV3() {
     }
 
     // Print summary
-    console.log("\nSummary:");
     console.log(`Tables served: ${tablesServed.size}`);
     console.log(`Items served: ${itemsServed}`);
     console.log(`Total turnover: $${totalTurnover.toFixed(2)}`);
@@ -67,9 +66,3 @@ function waiterApplicationV3() {
 
 // Call the function
 const summary = waiterApplicationV3();
-
-// Print the summary information:
-console.log("\nOutput:");
-console.log(`Tables served: ${summary.tablesServed}`);
-console.log(`Items served: ${summary.itemsServed}`);
-console.log(`Total turnover: $${summary.totalTurnover.toFixed(2)}`);
